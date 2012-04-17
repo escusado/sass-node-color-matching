@@ -1,0 +1,29 @@
+html
+  head
+    title color
+    style(type='text/css')
+      body {margin:0;padding:0; background-color: #aaa;}
+      .color-cell { width: 100px; height: 100px; position: relative; float: left; margin: 0}
+      .color-cell .color-input,
+      .color-cell .color-new {width: 50px; position: absolute; bottom: 16px; border: none; background-color: rgba(0,0,0,.8); color: #fff}
+      .color-cell .color-new {right: 0; background-color: rgba(0,0,0,.5); text-align: right;}
+      .color-cell .color-name {width: 100px; position: absolute; bottom: 32px; border: none; background-color: rgba(255,255,255,.5)}
+      /*.color-cell { border: solid 1px #333; margin: 5px 0px 0px 5px;}*/
+      #crowdvoice-colors {clear: both}
+      .repeated{color: #f00; font-weight: bold; position: absolute; top: 16px; left: 15px; font-family: Arial, 'MS Trebuchet', sans-serif; background-color: #fff; border: 1px solid #333; display: none}
+      .btn {position: absolute; bottom: 2px; cursor: pointer}
+      .dp {right:4px}
+      .lp {right:17px}
+      .sp {right:42px}
+      .sm {right:55px}
+      .reset {left: 4px}
+      .controls-bk {width:100px; height:16px; position: absolute; bottom: 0; background-color: rgba(0,0,0,.5);}
+      .amounts {position: absolute; left: 3px; color: #ffffff; font-family: Arial, 'MS Trebuchet', sans-serif; font-size: 10px}
+      .sat-amo {top: 35px}
+      .dar-amo {top: 25px}
+    script(type='text/javascript', src='javascripts/jquery-1.7.1.min.js')
+    script(type='text/javascript', src='javascripts/jquery-ui-1.8.18.custom.min.js')
+    script(type='text/javascript', src='javascripts/app.js')
+  body
+    textarea#crowdvoice-colors(cols='30', rows='10')
+    button#debug(type='button') Click Me!
