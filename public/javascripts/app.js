@@ -3,7 +3,7 @@
       var colors = [];
 
       var cell = $('\
-                    <div class="color-cell" data-dar="0">\
+                    <div class="color-cell" data-dar="0" data-sat="0">\
                       <input type="text" class="color-name"></input>\
                       <span class="repeated">repeated</span>\
                       <input type="text" class="color-input"></input>\
@@ -52,7 +52,6 @@
                  .parent()
                  .attr('id', i)
                  .attr('data-original', color.value)
-                 .attr('data-sat', 0)
                  .css('background-color', color.value);
           
           //DOMnode.attr('style', 'background-color: #'+color.value+';');
@@ -157,8 +156,10 @@
 
         $('.reset').click(function(){
           var cell = $(this).parent();
-          cell.css('background-color', '#'+cell.attr('data-original'));
+          cell.css('background-color', cell.attr('data-original'));
           cell.find('.color-new').val(cell.attr('data-original'));
+          cell.find('.sat-amo .val').text('');
+          cell.find('.dar-amo .val').text('');
         });
 
         $('body').sortable();
